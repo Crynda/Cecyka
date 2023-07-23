@@ -27,7 +27,7 @@ public class MenuCont implements Initializable{
 	@FXML
 	private Button myButton;
 	@FXML
-	private StackPane myStPane;
+	private StackPane myStPane;//crear una clase especifica para cargar el stack pane en un objeto de dicha clase y usarlo en las animaciones
 
 
 	
@@ -50,6 +50,7 @@ public class MenuCont implements Initializable{
 	private void loadconfig(ActionEvent event) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("config.fxml")); 
 		Scene scene = myButton.getScene();
+	
 		
 		root.translateYProperty().set(scene.getHeight()); //aqui movemos el root (escena a cargar), en este caso la altura 
 		myStPane.getChildren().add(root);
